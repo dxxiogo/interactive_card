@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+}
+:root{
+    --white: hsl(0, 0%, 100%);
+    --lightgrayish : hsl(270, 3%, 87%);
+    --darkgrayish: hsl(279, 6%, 55%);
+    --verydark: hsl(278, 68%, 11%);
+}
+.main-content{
+    display: flex;
+}
+.card-section{
+    background-image: url(images/bg-main-desktop.png);
+    background-size: cover;
+    height: 100vh;
+    width: 450px;
+    padding-top: 50px;
+}
+.card{
+    width: 445px;
+    height: 245px;
+}
+
+.card-front{
+    background-image: url(images/bg-card-front.png);
+    background-size: cover;
+    border-radius: 8px;
+    padding: 20px;
+    margin-left: 210px;
+    margin-bottom: 20px;
+}
+.details-circles{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.detail_card-circle_biggest{
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 100%;
+}
+.detail_card-circle_smallest{
+    width: 11px;
+    height: 11px;
+    border: 1px solid white;
+    border-radius: 100%;
+}
+.text-card_content{
+    margin-top: 80px;
+}
+.count-information-card{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+}
+.card-number{
+    letter-spacing: 5px;
+    font-size: 22px;
+    margin-left: 20px;
+    color: white;
+}
+.card-back{
+    margin-left: 280px;
+}
+.form-section{
+    margin-left: 330px;
+    padding: 30px;
+}
+form{
+    padding-top: 180px;
+}
+form > *{
+    display: block;
+}
+label{
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+form > input{
+    width: 381px;
+    height: 41px;
+    border-radius: 7px;
+    outline: none;
+    border: .8px solid black;
+    padding: 5px;
+    background: none;
+    margin-bottom: 30px;
+}
+.form-additional_information{
+    display: flex;
+}
+.input-data > input{
+    width: 81px;
+    height: 44px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-left: 5px;
+    border: .8px solid black;
+    border-radius: 7px;
+}
+.card-cvc{
+    display: flex;
+    margin-left: 10px ;
+    flex-direction: column;
+}
+.card-cvc > label{
+    margin-bottom: 14px;
+}
+.card-cvc > input{
+    height: 44px;
+    border: .8px solid black;
+    border-radius: 7px;
+    padding-left: 5px;
+    width: 200px;
+}
+.submeter{
+    background-color: var(--verydark);
+    color: white;
+    cursor: pointer;
+}

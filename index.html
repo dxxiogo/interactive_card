@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão interativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main-content">
+        <section class="card-section">
+            <div class="card-front card">
+                <div class="details-circles">
+                    <div class="detail_card-circle_biggest"></div>
+                    <div class="detail_card-circle_smallest"></div>
+                </div>
+                <div class="text-card_content">
+                    <p class="card-number">0000 0000 0000 0000</p>
+                    <div class="count-information-card">
+                        <p class="card_user-name">JANE  APPLESEED</p>  
+                        <p class="card-data">00/00</p>
+                    </div>
+                </div>
+            </div>
+            <img src="images/bg-card-back.png" alt="" class="card card-back">
+        </section>
+        <section class="form-section">
+            <form action="#">
+                <label for="name">CARDHOLDER NAME</label>
+                <input type="text" name="name" id="form-name" placeholder="e.g Jane Appleseed" onchange="changeCountName()">
+                <label for="number">CARD NUMBER</label>
+                <input type="text" name="number" id="form-number-card" placeholder=" e.g. 1234 5678 9123 0000">
+                <div class="form-additional_information">
+                    <div class="form-data_additional">
+                        <label for="mouth">EXP. DATE (MM/YY)</label>
+                        <div class="input-data">
+                            <input type="number" name="mouth" placeholder="MM">
+                            <input type="number" name="year" placeholder="YY">
+                        </div>
+                    </div>
+                    <div class="card-cvc">
+                        <label for="cvc">CVC</label>
+                        <input type="text" name="cvc" id="cvc-card" placeholder="e.g. 123">
+                    </div>
+                </div>
+                <input type="submit" value="Confirm" class="submeter">
+            </form>
+        </section>
+        <script src="index.js"></script>
+    </main>
+</body>
+</html>
