@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
     <title>Cartão interativo</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,33 +20,45 @@
                     <p class="card-number">0000 0000 0000 0000</p>
                     <div class="count-information-card">
                         <p class="card_user-name">JANE  APPLESEED</p>  
-                        <p class="card-data">00/00</p>
+                        <p class="card-data"><span class="text-mouth">00</span>/<span class="text-year">00</span></p>
                     </div>
                 </div>
             </div>
-            <img src="images/bg-card-back.png" alt="" class="card card-back">
+            <div class="card card-back">
+                    <p class="text-cvc">000</p>
+            </div>
         </section>
+
         <section class="form-section">
-            <form action="#">
+            <form action="#" id="form">
+
                 <label for="name">CARDHOLDER NAME</label>
-                <input type="text" name="name" id="form-name" placeholder="e.g Jane Appleseed" onchange="changeCountName()">
+                <input type="text" name="name" class="form-name" placeholder="e.g Jane Appleseed" oninput="changeCountName()" required>
+
                 <label for="number">CARD NUMBER</label>
-                <input type="text" name="number" id="form-number-card" placeholder=" e.g. 1234 5678 9123 0000">
+                <input type="text" name="number" class="form-number-card" placeholder=" e.g. 1234 5678 9123 0000" oninput ="changeCountNumber()" required>
+
                 <div class="form-additional_information">
                     <div class="form-data_additional">
                         <label for="mouth">EXP. DATE (MM/YY)</label>
                         <div class="input-data">
-                            <input type="number" name="mouth" placeholder="MM">
-                            <input type="number" name="year" placeholder="YY">
+                            <input type="text" name="mouth" placeholder="MM" oninput="changeMouth()" required>
+                            <input type="text" name="year" placeholder="YY" oninput="changeYear()" required>
                         </div>
                     </div>
                     <div class="card-cvc">
                         <label for="cvc">CVC</label>
-                        <input type="text" name="cvc" id="cvc-card" placeholder="e.g. 123">
+                        <input type="text" name="cvc" class="cvc-card" placeholder="e.g. 123" oninput="changeCountCVC()">
                     </div>
                 </div>
-                <input type="submit" value="Confirm" class="submeter">
+                <input type="button" value="Confirm" class="submeter" onclick="authenticateInformation()">
             </form>
+        </section>
+        <section class="card-authentication" id="authenticate">
+            <img src="images/icon-complete.svg" alt="">
+            <h2>THANK YOU!</h2>
+            <p>We've added your card details</p>
+            <button class="submeter">Continue</button>
         </section>
         <script src="index.js"></script>
     </main>

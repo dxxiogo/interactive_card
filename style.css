@@ -14,6 +14,7 @@
 }
 .main-content{
     display: flex;
+    flex-wrap: wrap;
 }
 .card-section{
     background-image: url(images/bg-main-desktop.png);
@@ -21,6 +22,7 @@
     height: 100vh;
     width: 450px;
     padding-top: 50px;
+    letter-spacing: 2px;
 }
 .card{
     width: 445px;
@@ -41,19 +43,19 @@
     gap: 10px;
 }
 .detail_card-circle_biggest{
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     background-color: white;
     border-radius: 100%;
 }
 .detail_card-circle_smallest{
-    width: 11px;
-    height: 11px;
+    width: 15px;
+    height: 15px;
     border: 1px solid white;
     border-radius: 100%;
 }
 .text-card_content{
-    margin-top: 80px;
+    margin-top: 70px;
 }
 .count-information-card{
     margin-top: 50px;
@@ -78,6 +80,15 @@
     margin-left: 330px;
     padding: 30px;
 }
+.card-back{
+    background-image: url(images/bg-card-back.png);
+}
+.card-back > .text-cvc{
+    position: relative;
+    top: 40px;
+    left: 380px;
+    color: white
+}
 form{
     padding-top: 180px;
 }
@@ -88,11 +99,13 @@ label{
     font-size: 13px;
     margin-bottom: 10px;
 }
+input{
+    outline: none;
+}
 form > input{
     width: 381px;
     height: 41px;
     border-radius: 7px;
-    outline: none;
     border: .8px solid black;
     padding: 5px;
     background: none;
@@ -129,4 +142,18 @@ form > input{
     background-color: var(--verydark);
     color: white;
     cursor: pointer;
+    width: 381px;
+    height: 41px;
+    border-radius: 7px;
+}
+.card-authentication{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    height: 300px;
+    display: none;
+    margin-top: 200px;
+}
+.card-authentication > h2{
+    letter-spacing: 3px;
 }
