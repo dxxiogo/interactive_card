@@ -102,6 +102,9 @@ label{
 input{
     outline: none;
 }
+input:focus{
+    border: 2px solid var(--verydark);
+}
 form > input{
     width: 381px;
     height: 41px;
@@ -123,6 +126,9 @@ form > input{
     border: .8px solid black;
     border-radius: 7px;
 }
+.input-data > input:focus{
+    border: 2px solid var(--verydark);
+}
 .card-cvc{
     display: flex;
     margin-left: 10px ;
@@ -137,6 +143,9 @@ form > input{
     border-radius: 7px;
     padding-left: 5px;
     width: 200px;
+}
+.card-cvc > input:focus{
+    border: 2px solid var(--verydark);
 }
 .submeter{
     background-color: var(--verydark);
@@ -156,4 +165,8 @@ form > input{
 }
 .card-authentication > h2{
     letter-spacing: 3px;
+}
+footer{
+    font-size: 14px;
+    text-align: center;
 }
