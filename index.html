@@ -33,7 +33,7 @@
             <form action="#" id="form">
 
                 <label for="name">CARDHOLDER NAME</label>
-                <input type="text" name="name" class="form-name" placeholder="e.g Jane Appleseed" oninput="changeCountName()" required>
+                <input type="text" name="name" class="form-name" placeholder="e.g Jane Appleseed" oninput="changeCountName()" autocomplete="off">
 
                 <label for="number">CARD NUMBER</label>
                 <input type="text" name="number" class="form-number-card" placeholder=" e.g. 1234 5678 9123 0000" oninput ="changeCountNumber()" required>
@@ -52,6 +52,7 @@
                     </div>
                 </div>
                 <input type="button" value="Confirm" class="submeter" onclick="authenticateInformation()">
+                <footer>&copy;Created by <a href="">Diogo</a> from <a href="">Frontend  Mentor</a></footer>
             </form>
         </section>
         <section class="card-authentication" id="authenticate">
@@ -59,6 +60,7 @@
             <h2>THANK YOU!</h2>
             <p>We've added your card details</p>
             <button class="submeter">Continue</button>
+            <footer>&copy;Created by <a href="">Diogo</a> from <a href="">Frontend  Mentor</a></footer>
         </section>
         <script src="index.js"></script>
     </main>
